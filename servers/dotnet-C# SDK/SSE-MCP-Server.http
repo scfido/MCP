@@ -1,0 +1,7 @@
+@SSE-MCP-Server_HostAddress = http://localhost:5017
+
+### 
+GET {{SSE-MCP-Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

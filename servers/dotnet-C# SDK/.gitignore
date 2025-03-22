@@ -1,0 +1,54 @@
+# .NET构建输出
+bin/
+obj/
+
+# Visual Studio文件
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+# 运行时生成文件
+*.db
+*.db-shm
+*.db-wal
+
+# 编译器生成文件
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.txt
+
+# 日志文件
+*.log
+logs/
+
+# NuGet包
+*.nupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE文件
+.idea/
+.vscode/
+*.swp
+*.*~
+project.lock.json
+.project
+.classpath
+.settings
+*.sublime-workspace
+
+# 其他文件
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user 

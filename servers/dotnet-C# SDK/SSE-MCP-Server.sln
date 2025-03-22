@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE-MCP-Server", "SSE-MCP-Server.csproj", "{261978C6-F4F8-4AB1-B65B-257853D1C544}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Debug|x64.Build.0 = Debug|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Debug|x86.Build.0 = Debug|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Release|x64.ActiveCfg = Release|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Release|x64.Build.0 = Release|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Release|x86.ActiveCfg = Release|Any CPU
+		{261978C6-F4F8-4AB1-B65B-257853D1C544}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
