@@ -1,0 +1,51 @@
+name: Build and Test
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        configuration: [Debug, Release]
+
+    steps: 
+    - uses: actions/checkout@v4
+      with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+     
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: | 
+          9.0.x
+          8.0.x
+
+    # Netfx testing on non-Windows requires mono
+    - name: Setup Mono
+      if: runner.os == 'Linux'
+      run: sudo apt-get install -y mono-devel
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    
+    - name: Install dependencies for tests
+      run: npm install @modelcontextprotocol/server-everything
+
+    - name: Install dependencies for tests
+      run: npm install @modelcontextprotocol/server-memory
+
+    - name: Build
+      run: dotnet build --configuration ${{ matrix.configuration }}
+
+    - name: Test
+      run: dotnet test --filter '(Execution!=Manual)' --no-build --configuration ${{ matrix.configuration }}

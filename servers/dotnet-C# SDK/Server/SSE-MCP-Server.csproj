@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\csharp-sdk\src\ModelContextProtocol\ModelContextProtocol.csproj" />
+    </ItemGroup>
+
 </Project>

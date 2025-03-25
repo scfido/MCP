@@ -1,0 +1,26 @@
+<Project>
+  <Import Project="..\Directory.Build.props" />
+
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/modelcontextprotocol/csharp-sdk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/modelcontextprotocol/csharp-sdk</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ModelContextProtocol;mcp;ai;llm</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>logo.png</PackageIcon>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageOutputPath>$(RepoRoot)artifacts/</PackageOutputPath>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AssemblyOriginatorKeyFile>$(RepoRoot)\Open.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(RepoRoot)\logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

@@ -1,4 +1,6 @@
 using Demo.MCPServer.Repositories;
+using ModelContextProtocol.Server;
+using System.ComponentModel;
 using System.Text.Json;
 
 namespace Demo.MCPServer.Tools;
@@ -16,33 +18,22 @@ public class StudentScoreTool
         _repository = repository;
     }
 
-    /// <summary>
-    /// 查询学生成绩
-    /// </summary>
-    /// <param name="studentName">学生姓名</param>
-    /// <param name="subjectName">科目名称</param>
-    /// <returns>学生成绩列表</returns>
     [McpTool]
+    [Description("查询学生成绩")]
     public static async Task<string> QueryScoreAsync(
-        [McpParameter(true)] string studentName,
-        [McpParameter(false)] string subjectName)
+        [Description("学生姓名")] string studentName,
+        [Description("科目名称")] string subjectName)
     {
         var scores = await _repository.QueryScoreAsync(studentName, subjectName);
         return JsonSerializer.Serialize(scores);
     }
 
-    /// <summary>
-    /// 查询成绩统计信息
-    /// </summary>
-    /// <param name="gender">性别</param>
-    /// <param name="className">班级名称</param>
-    /// <param name="grade">年级</param>
-    /// <returns>成绩统计信息</returns>
     [McpTool]
+    [Description("查询成绩统计信息")]
     public static async Task<string> QueryStatisticsAsync(
-        [McpParameter(false)] string gender,
-        [McpParameter(false)] string className,
-        [McpParameter(false)] string grade)
+        [Description("性别")] string gender,
+        [Description("班级名称")] string className,
+        [Description("年级")] string grade)
     {
         var statistics = await _repository.QueryScoreStatisticsAsync(gender, className, grade);
         return JsonSerializer.Serialize(statistics);
