@@ -5,7 +5,9 @@
 ## 项目结构
 
 - `servers/` - 包含各种语言实现的MCP服务器示例
-  - `dotnet/` - 基于.NET实现的MCP服务器示例（学生成绩管理系统）
+  - `dotnet-MCPSharp/` - 基于.NET MCPSharp实现的MCP服务示例（学生成绩管理系统）
+  - `dotnet-C# SDK` - 基于MCP官方 MCP C# SDK实现的服务示例（学生成绩管理系统）
+
 
 ## 关于MCP协议
 
