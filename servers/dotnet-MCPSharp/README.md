@@ -47,8 +47,8 @@ dotnet run
 
 以下是系统运行的示例截图：
 
-![运行截图1](/docs/demo1.jpg)
-![运行截图2](/docs/demo2.jpg)
+![运行截图1](/servers/dotnet/docs/demo1.jpg)
+![运行截图2](/servers/dotnet/docs/demo2.jpg)
 
 ## 使用指南
 
